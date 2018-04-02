@@ -4,16 +4,38 @@ const app = getApp()
 
 Page({
     data: {
-        motto: '超级无敌番薯颖？',
+        motto: 'welcome people',
         userInfo: {},
         hasUserInfo: false,
         canIUse: wx.canIUse('button.open-type.getUserInfo')
     },
     //事件处理函数
-    bindViewTap: function () {
+    bindButton: function () {
         wx.navigateTo({
-            url: '../logs/logs'
+            url: '../audio/audio'
         })
+    },
+    bindViewTap: function () {
+        wx.getSystemInfo({
+            success: function (res) {
+                console.log(res.model)
+                console.log(res.pixelRatio)
+                console.log(res.windowWidth)
+                console.log(res.windowHeight)
+                console.log(res.language)
+                console.log(res.version)
+                console.log(res.platform)
+                console.log(res.SDKVersion)
+            }
+        });
+        // wx.scanCode({
+        //     success: (res) => {
+        //         console.log(res)
+        //     }
+        // })
+        // wx.navigateTo({
+        //     url: '../logs/logs'
+        // })
     },
     onLoad: function () {
         if (app.globalData.userInfo) {

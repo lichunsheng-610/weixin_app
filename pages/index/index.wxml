@@ -7,6 +7,13 @@
             <text class="userinfo-nickname">{{userInfo.nickName}}</text>
         </block>
     </view>
+    <button class='audio_nag' bindtap="bindButton">
+        <!-- <navigator url="pages/auido/auido" class="navigator">
+            <view class="navigator-text">{{page}}</view>
+            <view class="navigator-arrow"></view>
+        </navigator> -->
+        
+    </button>
     <view class="usermotto">
         <text class="user-motto">{{motto}}</text>
     </view>
