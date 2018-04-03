@@ -4,7 +4,7 @@ const app = getApp()
 
 Page({
     data: {
-        motto: 'welcome people',
+        motto: 'Please log in first.',
         userInfo: {},
         hasUserInfo: false,
         canIUse: wx.canIUse('button.open-type.getUserInfo')
@@ -16,18 +16,21 @@ Page({
         })
     },
     bindViewTap: function () {
-        wx.getSystemInfo({
-            success: function (res) {
-                console.log(res.model)
-                console.log(res.pixelRatio)
-                console.log(res.windowWidth)
-                console.log(res.windowHeight)
-                console.log(res.language)
-                console.log(res.version)
-                console.log(res.platform)
-                console.log(res.SDKVersion)
-            }
-        });
+        wx.navigateTo({
+            url: '../phone/phone'
+        })
+        // wx.getSystemInfo({
+        //     success: function (res) {
+        //         console.log(res.model)
+        //         console.log(res.pixelRatio)
+        //         console.log(res.windowWidth)
+        //         console.log(res.windowHeight)
+        //         console.log(res.language)
+        //         console.log(res.version)
+        //         console.log(res.platform)
+        //         console.log(res.SDKVersion)
+        //     }
+        // });
         // wx.scanCode({
         //     success: (res) => {
         //         console.log(res)
@@ -38,10 +41,12 @@ Page({
         // })
     },
     onLoad: function () {
+        console.log("-----onload");
         if (app.globalData.userInfo) {
             this.setData({
                 userInfo: app.globalData.userInfo,
-                hasUserInfo: true
+                hasUserInfo: true,
+                motto: 'welcome ' + app.globalData.userInfo.nickName
             })
         } else if (this.data.canIUse) {
             // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
@@ -49,7 +54,8 @@ Page({
             app.userInfoReadyCallback = res => {
                 this.setData({
                     userInfo: res.userInfo,
-                    hasUserInfo: true
+                    hasUserInfo: true,
+                    motto: 'welcome ' + res.userInfo.nickName
                 })
             }
         } else {
@@ -59,18 +65,33 @@ Page({
                     app.globalData.userInfo = res.userInfo
                     this.setData({
                         userInfo: res.userInfo,
-                        hasUserInfo: true
+                        hasUserInfo: true,
+                        motto: 'welcome ' + res.userInfo.nickName
                     })
                 }
             })
         }
     },
-    getUserInfo: function (e) {
-        console.log(e)
+    onShow() {
+        console.log("-----show");
+    },
+    onReady() {
+        console.log("-----ready");
+    },
+    onHide() {
+        console.log("-----hide");
+    },
+    onUnload() {
+        console.log("-----unload");
+    },
+    getUserInfo_btn: function (e) {
+        console.log("------");
+        console.log(e);
         app.globalData.userInfo = e.detail.userInfo
         this.setData({
             userInfo: e.detail.userInfo,
-            hasUserInfo: true
+            hasUserInfo: true,
+            motto: 'welcome ' + e.detail.userInfo.nickName
         })
     }
 })

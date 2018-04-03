@@ -11,9 +11,9 @@ Page({
         }
     },
     onHide() {
-        console.log("-----audio hide");
+        console.log("-----main hide");
     },
     onUnload() {
-        console.log("-----audio unload");
+        console.log("-----main unload");
     }
 })

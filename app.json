@@ -1,7 +1,9 @@
 {
     "pages": [
         "pages/index/index",
+        "pages/main/main",
         "pages/audio/audio",
+        "pages/phone/phone",
         "pages/logs/logs"
     ],
     "window": {
