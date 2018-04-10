@@ -1,11 +1,50 @@
-<view class="container">
-    <!-- <template is="head" data="{{title: 'audio'}}"/>  -->
-
-    <view class="page-body">
-        <view class="page-section page-section-gap" style="text-align: center;">
-            <audio style="text-align: left" src="{{current.src}}" poster="{{current.poster}}" name="{{current.name}}" author="{{current.author}}" action="{{audioAction}}" controls></audio>
+<view class="main">
+    <swiper class='main_header' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}">
+            <swiper-item>
+                <image src="{{item}}" class="slide-image" width="355" height="150" />
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class='main_content'>
+        <view class='content_item'>
+            <view class='dc_item'>
+                <image class='item_img' src='/image/api.png'></image>
+                <view class='item_txt'>点餐</view>
+            </view>
+            <view class='jfsc_item'>
+                <image class='item_img' src='/image/feedback.png'></image>
+                <view class='item_txt'>积分商城</view>
+            </view>
+        </view>
+        <view class='content_item'>
+            <view class='myl_item'>
+                <image class='item_img' src='/image/media.png'></image>
+                <view class='item_txt'>麦有礼</view>
+            </view>
+            <view class='mls_item'>
+                <image class='item_img' src='/image/device.png'></image>
+                <view class='item_txt'>麦乐送</view>
+            </view>
+            <view class='mmtlh_item'>
+                <image class='item_img' src='/image/page.png'></image>
+                <!-- <text class="iconfont icon-wode" style="font-size:50px;color:red"></text> -->
+                <view class='item_txt'>麦麦童乐会</view>
+            </view>
+        </view>
+        <view class='content_item'>
+            <view class='mmdfs_item'>
+                <image class='item_img' src='/image/location.png'></image>
+                <view class='item_txt'>麦麦大番薯</view>
+            </view>
+            <view class='mmyqw_item'>
+                <image class='item_img' src='/image/network.png'></image>
+                <view class='item_txt'>麦麦一起玩</view>
+            </view>
+            <view class='mmsss_item'>
+                <image class='item_img' src='/image/storage.png'></image>
+                <view class='item_txt'>麦麦十三岁</view>
+            </view>
         </view>
     </view>
-
-    <!-- <template is="foot" /> -->
 </view>

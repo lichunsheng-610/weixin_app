@@ -1,7 +1,7 @@
 {
     "pages": [
-        "pages/index/index",
         "pages/main/main",
+        "pages/index/index",
         "pages/audio/audio",
         "pages/phone/phone",
         "pages/logs/logs"
@@ -9,7 +9,39 @@
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "WeChat",
+        "navigationBarTitleText": "翻版麦当劳",
         "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#aaa",
+        "selectedColor": "#f1d033",
+        "borderStyle": "white",
+        "backgroundColor": "#eee",
+        "list": [
+            {
+                "pagePath": "pages/main/main",
+                "iconPath": "image/main.png",
+                "selectedIconPath": "image/main.png",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/logs/logs",
+                "iconPath": "image/main.png",
+                "selectedIconPath": "image/main.png",
+                "text": "点餐"
+            },
+            {
+                "pagePath": "pages/logs/logs",
+                "iconPath": "image/main.png",
+                "selectedIconPath": "image/main.png",
+                "text": "麦乐送"
+            },  
+            {
+                "pagePath": "pages/phone/phone",
+                "iconPath": "image/main.png",
+                "selectedIconPath": "image/main.png",
+                "text": "会员"
+            }
+        ]
     }
 }

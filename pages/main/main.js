@@ -1,15 +1,15 @@
 Page({
     data: {
-        current: {
-            poster: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000',
-            name: '此时此刻',
-            author: '许巍',
-            src: 'http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E06DCBDC9AB7C49FD713D632D313AC4858BACB8DDD29067D3C601481D36E62053BF8DFEAF74C0A5CCFADD6471160CAF3E6A&fromtag=46',
-        },
-        audioAction: {
-            method: 'pause'
-        }
-    },
+        imgUrls: [
+            'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523360018762&di=d3c4804445888fc55e5c411f6466b7ac&imgtype=0&src=http%3A%2F%2Fpic3.16pic.com%2F00%2F53%2F72%2F16pic_5372096_b.jpg',
+            'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523360014405&di=28b82985237029da0423519d5d4c7aa7&imgtype=0&src=http%3A%2F%2Fpic3.16pic.com%2F00%2F07%2F66%2F16pic_766175_b.jpg',
+            'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1523360011224&di=f1515f322b292392f0d7e6231d952f65&imgtype=0&src=http%3A%2F%2Fpic11.nipic.com%2F20101215%2F3400947_015953693504_2.jpg'
+        ],
+        indicatorDots: true,
+        autoplay: true,
+        interval: 5000,
+        duration: 1000
+  },
     onHide() {
         console.log("-----main hide");
     },
