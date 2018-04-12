@@ -1,9 +1,12 @@
 {
     "pages": [
+        "pages/dc_list/dc_list",
+        
         "pages/main/main",
         "pages/index/index",
         "pages/audio/audio",
         "pages/phone/phone",
+        
         "pages/logs/logs"
     ],
     "window": {
@@ -25,19 +28,19 @@
                 "text": "首页"
             },
             {
-                "pagePath": "pages/logs/logs",
+                "pagePath": "pages/phone/phone",
                 "iconPath": "image/main.png",
                 "selectedIconPath": "image/main.png",
                 "text": "点餐"
             },
             {
-                "pagePath": "pages/logs/logs",
+                "pagePath": "pages/phone/phone",
                 "iconPath": "image/main.png",
                 "selectedIconPath": "image/main.png",
                 "text": "麦乐送"
             },  
             {
-                "pagePath": "pages/phone/phone",
+                "pagePath": "pages/index/index",
                 "iconPath": "image/main.png",
                 "selectedIconPath": "image/main.png",
                 "text": "会员"

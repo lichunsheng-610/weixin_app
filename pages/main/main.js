@@ -9,9 +9,17 @@ Page({
         autoplay: true,
         interval: 5000,
         duration: 1000
-  },
+    },
     onHide() {
         console.log("-----main hide");
+    },
+    dc_click() {
+        console.log("1");
+        wx.navigateTo({
+            url: '../dc_list/dc_list'
+        });
+        console.log("12");
+        
     },
     onUnload() {
         console.log("-----main unload");

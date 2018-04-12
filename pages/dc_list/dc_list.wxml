@@ -1,0 +1,34 @@
+<view class='list_main'>
+    <scroll-view class="list-scroll-view" scroll-y="true" bindscroll="scroll_event" scroll-top="{{scroll_top_value}}">
+
+        <view class="list_header">
+            <block wx:if="{{img_show}}">
+                <image class='list_img' src='http://h1.ioliu.cn//bing/Wintersolstice1222_ZH-CN10807868228_1920x1080.jpg'></image>
+            </block>
+            <block wx:else>
+                <view class="list_text">凡在本店消费满20赠送饮料一瓶</view>
+            </block>
+        </view>
+
+        <!--左侧菜单-->
+        <view class="list-left-menu" style="top:{{menu_top}}; position:{{menu_position}}">
+            <view wx:for="{{list_menu}}" wx:for-index="i" wx:for-item="item" wx:key="menuId">
+                <view class="list-menu-name" wx:if="{{i!=index}}">
+                    <view class='list-menu-name-text' id="menu{{i}}" bindtap='click_menu_item'>{{item.GroupName}}</view>
+                </view>
+                <view class="list-menu-name-selected" wx:else>
+                    <view class='list-menu-name-text' id="menu{{i}}" bindtap='click_menu_item'>{{item.GroupName}}</view>
+                </view>
+            </view>
+        </view>
+
+        <!--右侧菜单  -->
+        <view class='list-right'>
+            <view wx:for="{{listdata}}" class="list_item_data" wx:for-index="i" wx:for-item="itme" wx:key="menuId">
+                <view class='boox' id='list_data{{i}}'>
+                    <text class='boox-text'>{{itme.GroupName}}</text>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+</view>
