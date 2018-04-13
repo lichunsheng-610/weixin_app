@@ -70,12 +70,12 @@
 .list-right {
     display: flex;
     flex-direction: column;
-    height:2025px;
+    /* height: 2026px; */
     width: 80vw;
     background-color: #ebebeb;
     position: absolute;
     left: 20vw;
-    padding-left: 10px;    
+    padding-left: 10px;
     padding-right: 10px;
     box-sizing: border-box;
 }

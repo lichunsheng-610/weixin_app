@@ -13,13 +13,15 @@ Page({
     onHide() {
         console.log("-----main hide");
     },
+    mls_click(){
+        wx.navigateTo({
+            url: '../mls_map/mls_map'
+        });
+    },
     dc_click() {
-        console.log("1");
         wx.navigateTo({
             url: '../dc_list/dc_list'
-        });
-        console.log("12");
-        
+        });        
     },
     onUnload() {
         console.log("-----main unload");

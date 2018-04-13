@@ -1,12 +1,11 @@
 {
     "pages": [
-        "pages/dc_list/dc_list",
-        
         "pages/main/main",
         "pages/index/index",
         "pages/audio/audio",
         "pages/phone/phone",
-        
+        "pages/dc_list/dc_list",
+        "pages/mls_map/mls_map",
         "pages/logs/logs"
     ],
     "window": {
@@ -38,7 +37,7 @@
                 "iconPath": "image/main.png",
                 "selectedIconPath": "image/main.png",
                 "text": "麦乐送"
-            },  
+            },
             {
                 "pagePath": "pages/index/index",
                 "iconPath": "image/main.png",

@@ -22,7 +22,7 @@
                 <image class='item_img' src='/image/media.png'></image>
                 <view class='item_txt'>麦有礼</view>
             </view>
-            <view class='mls_item'>
+            <view class='mls_item' bindtap='mls_click'>
                 <image class='item_img' src='/image/device.png'></image>
                 <view class='item_txt'>麦乐送</view>
             </view>
