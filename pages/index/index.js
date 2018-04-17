@@ -41,7 +41,20 @@ Page({
         // })
     },
     onLoad: function () {
-        console.log("-----onload");
+        // console.log("-----onload");
+        wx.getSetting({
+            success: res => {
+                // console.log(res);
+                if (!res.authSetting['scope.userInfo']) {
+                    wx.showModal({
+                        title: "通知",
+                        content: "请允许获取个人资料。",
+                        showCancel: false,
+                        confirmText: "确定"
+                    });
+                }
+            }
+        })
         if (app.globalData.userInfo) {
             this.setData({
                 userInfo: app.globalData.userInfo,
@@ -73,20 +86,20 @@ Page({
         }
     },
     onShow() {
-        console.log("-----show");
+        // console.log("-----show");
     },
     onReady() {
-        console.log("-----ready");
+        // console.log("-----ready");
     },
     onHide() {
-        console.log("-----hide");
+        // console.log("-----hide");
     },
     onUnload() {
-        console.log("-----unload");
+        // console.log("-----unload");
     },
     getUserInfo_btn: function (e) {
-        console.log("------");
-        console.log(e);
+        // console.log("------");
+        // console.log(e);
         app.globalData.userInfo = e.detail.userInfo
         this.setData({
             userInfo: e.detail.userInfo,

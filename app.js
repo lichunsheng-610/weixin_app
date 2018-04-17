@@ -31,13 +31,6 @@ App({
                             }
                         }
                     })
-                } else {
-                    wx.showModal({
-                        title: "通知",
-                        content: "请允许获取个人资料。",
-                        showCancel: false,
-                        confirmText: "确定"
-                    })
                 }
             }
         })
