@@ -36,12 +36,15 @@
     padding-top: 15rpx;
     box-sizing: border-box;
 }
+.img_panel{
 
+}
 .item_img {
     width: 60rpx;
     height: 60rpx;
-    margin: 40rpx auto 20rpx;
+    margin: 0 auto;
     display: block;
+    /* margin-top: 5vh; */
 }
 
 .dc_item {
@@ -53,7 +56,7 @@
 }
 
 .dc_item .item_txt {
-    width: 70rpx;
+    width: 28px;
     margin: 0 auto;
 }
 
@@ -64,7 +67,7 @@
 }
 
 .jfsc_item .item_txt {
-    width: 135rpx;
+    width: 56px;
     margin: 0 auto;
 }
 
@@ -83,12 +86,12 @@
 }
 
 .myl_item .item_txt, .mls_item .item_txt, .mmtlh_item .item_txt {
-    width: 100rpx;
+    width: 42px;
     margin: 0 auto;
 }
 
 .mmtlh_item .item_txt, .mmdfs_item .item_txt, .mmyqw_item .item_txt,
 .mmsss_item .item_txt {
-    width: 165rpx;
+    width: 70px;
     margin: 0 auto;
 }

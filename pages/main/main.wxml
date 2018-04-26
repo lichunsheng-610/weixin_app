@@ -13,7 +13,9 @@
                 <view class='item_txt'>点餐</view>
             </view>
             <view class='jfsc_item'>
-                <image class='item_img' src='/image/feedback.png'></image>
+                <view class='img_panel'>
+                    <image class='item_img' src='/image/feedback.png'></image>
+                </view>
                 <view class='item_txt'>积分商城</view>
             </view>
         </view>
